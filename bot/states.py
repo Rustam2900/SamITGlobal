@@ -1,12 +1,9 @@
 from aiogram.fsm.state import State, StatesGroup
 
 
-class RegistrationStates(StatesGroup):
-    name = State()
-    contact = State()
-    password = State()
+class UserRegistrationState(StatesGroup):
+    full_name = State()
+    contact_info = State()
 
 
-class LoginStates(StatesGroup):
-    phone = State()
-    password = State()
+

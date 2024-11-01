@@ -1,4 +1,6 @@
-all_languages = ['en', 'uz']
+
+
+all_languages = ['ru', 'uz']
 
 message_history = {}
 
@@ -7,8 +9,8 @@ default_languages = {
                           "Вы не выбрали правильный язык!",
     "welcome_message": "Salom, botimizga xush kelibsiz!\n"
                        "Quyidagi tillardan birini tanlang!\n\n"
-                       "Hello, welcome to our bot!\n"
-                       "Choose one of the languages below!",
+                       "Здравствуйте, добро пожаловать в наш бот!\n"
+                       "Выберите один из языков ниже!",
 
     "uz": {
         "status": "status",
@@ -33,7 +35,7 @@ default_languages = {
         'exit': "Siz akkauntingizdan chiqdingiz",
         "sign_password": "Parolni kiritng",
         "company_name": "Kampaniya nomini kiriting",
-        "employee_name": "xodimi ism familiyasini kiriting",
+        "employee_name": "Kampaniya xodimi ism familiyasini kiriting",
         "employee_count": "Kampaniyada ishchilar sonini kiriting",
         "company_contact": "Kampaniya telefon raqamini kiriting",
         "working_days": "Kampaniyadagi ish kuni sonini kiriting (haftasiga)",
@@ -58,7 +60,7 @@ default_languages = {
 
     },
 
-    "en": {
+    "ru": {
         "status": "status",
         "address": "адрес",
         "order_list": "orderсписок заказов",
@@ -75,13 +77,13 @@ default_languages = {
         "individual": "Физическое лицо",
         "legal": "Юридическое лицо",
         "select_user_type": "Выберите тип пользователя",
-        "registration": "registration",
-        "login": "login",
-        "logout": "↩️ logout",
+        "registration": "Зарегистрироваться",
+        "login": "Войти",
+        "logout": "↩️ Выйти из аккаунта",
         "exit": "Вы вышли из своей учетной записи",
         "sign_password": "Введите пароль",
         "company_name": "Введите название кампании",
-        "employee_name": "Enter the employee's first and last name",
+        "employee_name": "Введите имя и фамилию сотрудника кампании.",
         "employee_count": "Введите количество работников в кампании.",
         "company_contact": "Введите номер телефона кампании",
         "working_days": "Введите количество рабочих дней в кампании (в неделю)",
@@ -110,60 +112,26 @@ user_languages = {}
 local_user = {}
 
 introduction_template = {
-    'en':
+    'ru':
         """
-    🔹 Telegram Channel:  <a href="https://t.me/IT_RustamDevPythonMy">Python</a> 
-
-    
-    What can the bot do?
-    - Ecommerce and online shopping
-    - Latest and high-quality products
-    - Manage and check your billing
-    - Stay updated on exclusive discounts and promotions
-    - Help with questions and support 
-    🌐 EcommerceBot – the best online bot!
-
-    🏠 Stay at home and enjoy unique services with ease!
-
-    🟢 Join now: <a href="https://t.me/IT_RustamDevPythonMy">Python</a>
-    ✉️  Telegram channel: <a href="https://t.me/IT_RustamDevPythonMy">Python</a>
-
-    
-    """,
+        добро пожаловать на наш курс
+        """,
 
     "uz":
 
         """
-    Telagram kanal <a href="https://t.me/IT_RustamDevPythonMy">Python</a> 
-
-    
-
-    Bot nimalarni qila oladi?
-    - Ecommerce and onlayn magazin
-    - So'nggi va sifatli  mahsulotlar
-    - Hisob-kitoblarni tekshirish
-    - Eksklyuziv chegirmalar va aksiyalar haqida xabardor bo'lish
-    - Savollar va yordam
-    🌐 EcommerceBot – eng yahshi onlayn bot! 
-
-    🏠 Uyda qolib unikal xizmatlardan foydalaning!
-
-    🟢 Hoziroq qo'shiling: <a href="https://t.me/IT_RustamDevPythonMy">Python</a>
-    ✉️ Telegram kanal: <a href="https://t.me/IT_RustamDevPythonMy">Python</a>
-
-    
-
-    """
+        kursimizga xush kelibsiz
+        """
 }
 
 bot_description = """
 Bu bot Nima qila qila oladi?
 
-💦 Ushbu bot Chere sof ichimlik suvini uydan turib istalgan vaqtda buyurtma qilishingiz va xizmat turlaridan foydalanishingiz uchun yaratilgan 💦
+kurlar haqida malumot beradi
 
 - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-💦 Этот бот создан для того, чтобы вы могли заказывать чистую питьевую воду Chere в любое время из дома и пользоваться услугами 💦
+предоставляет информацию о курсах
 """
 
 offer_text = {
@@ -184,7 +152,10 @@ order_text = {
     "ru": "Номер заказа {} \n Статус заказа {}"
 }
 
+
 def fix_phone(phone):
     if "+" not in phone:
         return f"+{phone}"
     return phone
+
+

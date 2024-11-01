@@ -3,5 +3,10 @@ from bot import models
 
 
 @register(models.CustomUser)
-class WhyUsTranslation(TranslationOptions):
+class CustomUserTranslation(TranslationOptions):
     fields = ('full_name', 'username')
+
+
+@register(models.Course)
+class CustomUserTranslation(TranslationOptions):
+    fields = ('title', 'description', 'course_duration')
