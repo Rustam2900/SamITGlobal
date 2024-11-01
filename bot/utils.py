@@ -134,28 +134,8 @@ kurlar haqida malumot beradi
 предоставляет информацию о курсах
 """
 
-offer_text = {
-    "ru":
-        "Сотрудники: {}\n"
-        "День непрерывности: {}\n"
-        "Мы рекомендуем вашим работникам {} бутылок с водой по 20 л.\n",
-    "uz":
-        """
-    Xodim: {}
-    Davomiylik kuni: {}
-    Xodimlaringizga {} x 20 litrli suv idishlarini tavsiya qilamiz.
-        """
-}
-
-order_text = {
-    "uz": "Buyurtma raqami {} \n Buyurtma holati {}",
-    "ru": "Номер заказа {} \n Статус заказа {}"
-}
 
 
-def fix_phone(phone):
-    if "+" not in phone:
-        return f"+{phone}"
-    return phone
+
 
 
