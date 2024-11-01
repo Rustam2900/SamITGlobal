@@ -13,13 +13,13 @@ def sync_save_user_language(user_id, user_lang):
             defaults={'user_lang': user_lang}
         )
 
-        if not created:  # Agar foydalanuvchi mavjud bo'lsa
-            if user.user_lang != user_lang:  # Agar til o'zgargan bo'lsa
+        if not created:
+            if user.user_lang != user_lang:
                 user.user_lang = user_lang
-                user.save()  # Bu yerda xatolik yuz berishi mumkin
+                user.save()
 
     except IntegrityError as e:
-        print(f"IntegrityError: {e}")  # Xatolik haqida ma'lumot chiqarish
+        print(f"IntegrityError: {e}")
 
 
 async def save_user_language(user_id, user_lang):

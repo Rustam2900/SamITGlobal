@@ -179,7 +179,7 @@ async def get_contact_info(message: Message, state: FSMContext):
         if user_language == 'ru':
             await message.answer("Ваш номер телефона указан в неправильном формате. Пожалуйста, \n\n"
                                  "+998 (XX) XXX XX XX введите в форме.")
-        else:  # O'zbek tili
+        else:
             await message.answer("Telefon raqamingiz noto'g'ri formatda. Iltimos, \n\n"
                                  "+998 (XX) XXX XX XX shaklida kiriting.")
         return
